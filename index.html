@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Для MEDODS</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="create_new" style="display: none;" id="create_new">
+	<div>
+		<h2>Новый клиент успено создан!</h2>
+	</div>
+</div>
+<div class="line">
+	<main>
+
+		<div class="presentation">
+			<div class="presentation__info">
+				<p>#001</p>
+				<p>УЖЕ ЗАРЕГИСТРИРОВАНО</p>
+				<div>
+					<span>Зарегестрируйтесь и вы! Благодоря этому, вы сможете записываться на прием к врачу в <u>ОДИН</u> клик</span>
+				</div>
+			</div>
+			<div class="presentation_btn" id="go_registr">Зарегистрироваться</div>
+		</div>
+
+		<form style="display: none;">
+
+				<h2>Регистрация</h2>
+
+				<p>Фамилия*</p>
+				<div class="form-input">
+					<input type="text" name="last_name" autocomplete="off" check>
+					<span style="display: none;">Введите фамилию</span>
+				</div>
+
+				<p>Имя*</p>
+				<div class="form-input">
+					<input type="text" name="first_name" autocomplete="off" check>
+					<span style="display: none;">Введите имя</span>
+				</div>
+
+				<p>Отчество</p>
+				<input type="text" name="middle_name" autocomplete="off">
+
+				<p>Дата рождения*</p>
+				<div class="form-input">
+					<input type="date" name="DOB" autocomplete="off" check>
+					<span style="display: none;">Введите дату рождения</span>
+				</div>
+
+				<p>Номер телефона*</p>
+				<div class="form-input">
+					<input type="number" name="phone_number" autocomplete="off" check>
+					<span style="display: none;">Введите номер телефона</span>
+				</div>
+
+				<p>Пол</p>
+				<div class="form__radio">
+					<div class="form__radio__item">
+						<input id="sex-radio-1" type="radio" name="SEX" value="1">
+						<label for="sex-radio-1">Мужской</label>
+					</div>
+					<div class="form__radio__item">
+						<input id="sex-radio-2" type="radio" name="SEX" value="2">
+						<label for="sex-radio-2">Женский</label>
+					</div>
+				</div>
+				
+
+				<p>Группа клиентов*</p>
+				<div class="div-rel">
+					<div class="form__multi-select" id="form__multi-select">
+						Выберите группу
+						<div class="form__multi-select__main" style="display: none;">
+							<div class="form__multi-select__items">
+								<input id="group_client-checkbox-1" type="checkbox" name="group_client-1">
+								<label for="group_client-checkbox-1">VIP</label>
+							</div>
+							<div class="form__multi-select__items">
+								<input id="group_client-checkbox-2" type="checkbox" name="group_client-2">
+								<label for="group_client-checkbox-2">Проблемные</label>
+							</div>
+							<div class="form__multi-select__items">
+								<input id="group_client-checkbox-3" type="checkbox" name="group_client-3">
+								<label for="group_client-checkbox-3">ОМС</label>
+							</div>
+						</div>
+					</div>
+					<span style="display: none;" class="span-info">Выберите группу</span>
+				</div>
+
+				<p>Лечащий врач</p>
+				<select name="doctor_client">
+					<option disabled="disabled" selected>Выберите врача</option>
+					<option value="id_doc_1">Иванов</option>
+					<option value="id_doc_2">Захаров</option>
+					<option value="id_doc_3">Чернышева</option>
+				</select>
+
+				<p>Не отправлять СМС</p>
+				<div class="form__checkbox">
+					<input id="check_sms-checkbox-1" type="checkbox" name="check_sms">
+					<label for="check_sms-checkbox-1"></label>
+				</div>
+
+				<h2>Адрес</h2>
+
+				<p>Индекс</p>
+				<input type="text" name="index" autocomplete="off">
+
+				<p>Страна</p>
+				<input type="text" name="country" autocomplete="off">
+
+				<p>Область</p>
+				<input type="text" name="region" autocomplete="off">
+
+				<p>Город*</p>
+				<div class="form-input">
+					<input type="text" name="city" autocomplete="off" check>
+					<span style="display: none;">Введите город проживания</span>
+				</div>
+
+				<p>Улица</p>
+				<input type="text" name="street" autocomplete="off">
+
+				<p>Дом</p>
+				<input type="text" name="house" autocomplete="off">
+
+				<h2>Паспорт</h2>
+
+				<p>Тип документа*</p>
+				<div class="form-input">
+					<select name="document" check>
+						<option disabled="disabled" selected>Выберите документ</option>
+						<option value="id_doc_1">Паспорт</option>
+						<option value="id_doc_2">Свидетельство о рождении</option>
+						<option value="id_doc_3">Вод. удостоверение</option>
+					</select>
+					<span style="display: none;">Выберите документ</span>
+				</div>
+
+				<p>Серия</p>
+				<input type="text" name="document_series" autocomplete="off">
+
+				<p>Номер</p>
+				<input type="text" name="document_number" autocomplete="off">
+
+				<p>Кем выдан</p>
+				<input type="text" name="document_by" autocomplete="off">
+
+				<p>Дата выдачи*</p>
+				<div class="form-input">
+					<input type="date" name="document_date" autocomplete="off" check>
+					<span style="display: none;">Введите дату выдачи</span>
+				</div>
+
+				<input type="button" name="registr" value="Зарегистрироваться" check>
+				<p class="form__p-info-validate" style="display: none;">Пожалуйста заполните все поля, которые отмечены красным цветом!</p>
+
+				<p class="form__p-info">*Поле обязательное для заполнения.</p>
+
+		</form>
+
+	</main>
+</div>
+
+<script type="text/javascript">
+	var inputs = document.querySelectorAll('input'),
+		multi = document.getElementById('form__multi-select'),
+		er = 0,
+		t = 0;
+		sm = 0;
+
+	for(let input of inputs){
+		input.addEventListener('change', function(){
+			if(!this.hasAttribute('check')){
+				if(this.value){
+					this.classList.add('valid');
+					er = 0;
+				}
+				else{
+					this.classList.remove('valid');
+				}
+			}
+			else{
+				if(this.value){
+					this.classList.remove('invalid');
+					this.classList.add('valid');
+					this.nextElementSibling.setAttribute('style', 'display: none');
+					er = 0;
+				}
+				else{
+					this.classList.remove('valid');
+					this.classList.add('invalid');
+					this.nextElementSibling.setAttribute('style', 'display: inline');
+					er = 1;
+				}
+			}
+		});
+	}
+
+	document.onclick = function(e){
+		if(sm == 1){
+			if(e.target.tagName == 'LABEL' || e.target.tagName == 'INPUT'){
+				t = 0;
+				er = 0;
+				multi.classList.remove('invalid');
+				multi.classList.add('valid');
+				multi.nextElementSibling.setAttribute('style', 'display: none')
+			}
+			else{
+				multi.childNodes[1].setAttribute('style', 'display: none');
+				sm = 0;
+			}
+			chek_multi();
+		}
+
+		else if(e.target.name == 'registr'){
+			for(let i=0; i<inputs.length-1; i++){
+				if(inputs[i].hasAttribute('check')){
+					if(!inputs[i].value){
+						inputs[i].classList.add('invalid');
+						inputs[i].nextElementSibling.setAttribute('style', 'display: inline');
+						er = 1;
+					}
+				}
+			}
+			chek_multi();
+			if(er == 1){
+				e.target.nextElementSibling.setAttribute('style', 'display: inline');
+			}
+			else{
+				document.getElementById('create_new').setAttribute('style', 'display: grid')
+				setTimeout(function(){
+						document.getElementById('create_new').setAttribute('style', 'display: none')
+				},2000);
+				document.querySelector('form').setAttribute('style', 'display: none');
+			}
+			
+		}
+		else if(e.target.id == 'go_registr'){
+			let i = document.querySelector('form');
+			if(i.hasAttribute('style')){
+				i.removeAttribute('style');
+			}
+			else{
+				i.setAttribute('style', 'display: none')
+			}
+			
+		}
+		else if(e.target.id == 'form__multi-select'){
+			e.target.childNodes[1].setAttribute('style', 'display: block');
+			sm = 1;
+		}
+	}
+
+	function chek_multi(){
+		let j = multi.querySelectorAll('input[type=checkbox]');
+		for(let i=0; i<j.length; i++){
+			if(j[i].checked){
+				t = 1;
+			}
+		}
+		if(t == 0){
+			multi.classList.add('invalid');
+			multi.nextElementSibling.setAttribute('style', 'display: inline');
+			er = 1;
+		}
+	}
+
+/*	function span_check(){
+		let j = document.querySelector('form').querySelectorAll('span'),
+			f = 0;
+		for(let i=0; i<j.length-1; i++){
+			if(j[i].style.display == 'none'){
+				f = 0;
+			}
+			else{
+				f = 1;
+			}
+		}
+		if(f == 1){
+			document.getElementsByClassName('form__p-info-validate')[0].setAttribute('style', 'display: none');
+		}
+	}*/
+</script>
+</body>
+</html>
